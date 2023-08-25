@@ -12,7 +12,8 @@
     "jsx": "preserve",
     "strict": false,
     "esModuleInterop": true,
-    "module": "esnext"
+    "module": "esnext",
+    "noImplicitAny": true
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
