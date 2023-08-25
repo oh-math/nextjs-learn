@@ -8,7 +8,7 @@ import { IPostData } from "./interfaces/post-data.interface";
 import { IPostDataWithHTML } from "./interfaces/post-with-html.interface";
 import { removeMdExtension } from "./remove-md-extension";
 
-const postsDirectory = path.join(process.cwd(), "posts");
+const postsDirectory = path.join(`${process.cwd()}/src/posts`);
 
 export function getSortedPostsData(): IPostData[] {
   const fileNames = fs.readdirSync(postsDirectory);
