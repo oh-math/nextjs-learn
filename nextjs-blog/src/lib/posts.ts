@@ -1,13 +1,14 @@
 import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
-import { remark } from "remark";
-import html from "remark-html";
+
 import { extractMatterData } from "./extract-matter-front";
 import { IPostData } from "./interfaces/post-data.interface";
 import { IPostDataWithHTML } from "./interfaces/post-with-html.interface";
 import { removeMdExtension } from "./remove-md-extension";
+import {Converter} from "showdown";
 
+const converter = new Converter()
 const postsDirectory = path.join(`${process.cwd()}/src/posts`);
 
 export function getSortedPostsData(): IPostData[] {
@@ -44,9 +45,8 @@ export async function getCompletePostData(
 
   const { content, data } = matter(fileContents);
   const { date, title } = extractMatterData(data);
-
-  const processedContent = await remark().use(html).process(content);
-  const contentHtml = processedContent.toString();
+  
+  const contentHtml = converter.makeHtml(content)
 
   return {
     id,

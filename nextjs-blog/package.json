@@ -9,13 +9,13 @@
     "@types/node": "20.2.5",
     "@types/react": "18.2.9",
     "@types/react-dom": "18.2.4",
+    "@types/showdown": "^2.0.1",
     "date-fns": "^2.30.0",
     "gray-matter": "^4.0.3",
     "next": "13.4.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "remark": "^14.0.3",
-    "remark-html": "^15.0.2"
+    "showdown": "^2.1.0"
   },
   "devDependencies": {
     "@types/node": "20.5.6",
