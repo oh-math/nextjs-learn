@@ -1,12 +1,8 @@
-import { format } from "date-fns";
-import eoLocale from "date-fns/locale/pt-BR";
+import { formatDate } from "../lib/format-date";
 
 export default function DateComponent({ dateString }: { dateString: string }) {
   const toDate = new Date(dateString);
+  const formatedDate = formatDate(toDate);
 
-  const date = format(toDate, "dd 'de' MMMM',' yyyy", {
-    locale: eoLocale,
-  });
-
-  return <time dateTime={dateString}>{date}</time>;
+  return <time dateTime={dateString}>{formatedDate}</time>;
 }
