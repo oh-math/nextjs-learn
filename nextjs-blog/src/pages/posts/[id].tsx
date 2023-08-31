@@ -1,5 +1,5 @@
 import Head from "next/head";
-import DateComponent from "../../components/date";
+import DateComponent from "../../components/DateComponent";
 import Layout from "../../components/layout";
 import { IPostDataWithHTML } from "../../lib/interfaces/post-with-html.interface";
 import { getAllPostIds, getCompletePostData } from "../../lib/posts";

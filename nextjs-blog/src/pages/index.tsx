@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
-import DateComponent from "../components/date";
+import DateComponent from "../components/DateComponent";
 import Layout, { siteTitle } from "../components/layout";
 import { IPostData } from "../lib/interfaces/post-data.interface";
 import { getSortedPostsData } from "../lib/posts";
